@@ -2,12 +2,13 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/state-in-constructor */
 import React from 'react';
+import moment from 'moment';
 import DateInput from './components/DateInput';
 import Photo from './components/Photo';
 
 export default class App extends React.Component {
   state = {
-    date: '',
+    date: moment().format('YYYY-MM-DD'),
     photo: '',
   };
 
@@ -27,19 +28,25 @@ export default class App extends React.Component {
       .then(photoData => this.setState({ photo: photoData }));
   };
 
-  changeDate = e => {
-    e.preventDefault();
-    const dateFromInput = e.target[0].value;
+  // formatDate = moment => {
+  //   moment().format('YYYY-MM-DD');
+  //   // const year = moment.year();
+  //   // const month = moment.month() + 1;
+  //   // const day = moment.date();
+  //   // return `${year}-${month}-${day}`;
+  // };
+
+  changeDate = dateFromInput => {
     this.setState({ date: dateFromInput });
-    this.getPhoto(dateFromInput);
+    this.getPhoto(moment(dateFromInput).format('YYYY-MM-DD'));
   };
 
   render() {
     return (
       <div>
         <h1>NASA'S Astronomy Picture of the Day</h1>
-        <DateInput changeDate={this.changeDate} />
-        <Photo photo={this.state.photo} />
+        <DateInput changeDate={this.changeDate} value={this.dateFromInput} />
+        <Photo photo={this.state.photo} date={this.state.date} />
       </div>
     );
   }
