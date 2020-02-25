@@ -19,10 +19,19 @@ export default class App extends React.Component {
       .then(json => this.setState({ photo: json }));
   }
 
+  getPhoto = date => {
+    fetch(
+      `https://api.nasa.gov/planetary/apod?date=${date}&api_key=klij40JKvLq3IkKh4F4ZYgtZBM9jhO1VPjPPMwfr`
+    )
+      .then(response => response.json())
+      .then(photoData => this.setState({ photo: photoData }));
+  };
+
   changeDate = e => {
     e.preventDefault();
     const dateFromInput = e.target[0].value;
     this.setState({ date: dateFromInput });
+    this.getPhoto(dateFromInput);
   };
 
   render() {

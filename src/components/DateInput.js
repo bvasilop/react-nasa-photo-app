@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 
-const DateInput = changeDate => (
-  <form onSubmit={changeDate}>
+const DateInput = props => (
+  <form onSubmit={props.changeDate}>
     Enter a date (YYYY-MM-DD):
     <input />
     <input type="submit" />
