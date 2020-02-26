@@ -28,14 +28,6 @@ export default class App extends React.Component {
       .then(photoData => this.setState({ photo: photoData }));
   };
 
-  // formatDate = moment => {
-  //   moment().format('YYYY-MM-DD');
-  //   // const year = moment.year();
-  //   // const month = moment.month() + 1;
-  //   // const day = moment.date();
-  //   // return `${year}-${month}-${day}`;
-  // };
-
   changeDate = dateFromInput => {
     this.setState({ date: dateFromInput });
     this.getPhoto(moment(dateFromInput).format('YYYY-MM-DD'));
@@ -43,10 +35,20 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>NASA'S Astronomy Picture of the Day</h1>
-        <DateInput changeDate={this.changeDate} value={this.dateFromInput} />
-        <Photo photo={this.state.photo} date={this.state.date} />
+      <div style={{ overflow: 'hidden' }}>
+        <div className="ui container" style={{ paddingTop: 5 }}>
+          <div className="ui raised segment">
+            <h1 className="ui center aligned container">
+              NASA'S Astronomy Pic of the Day
+            </h1>
+            <DateInput
+              photo={this.state.photo}
+              changeDate={this.changeDate}
+              value={this.dateFromInput}
+            />
+            <Photo photo={this.state.photo} date={this.state.date} />
+          </div>
+        </div>
       </div>
     );
   }
