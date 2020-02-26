@@ -1,25 +1,27 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Photo = props => (
+const Photo = ({ photo }) => (
   <div className="ui items">
     <div className="item">
       <img
-        src={props.photo.url}
-        alt={props.photo.title}
+        src={photo.url}
+        alt={photo.title}
         className="ui centered big image"
         style={{ paddingRight: 20 }}
       />
       <div>
         <h3 className="header" style={{ textAlign: 'center' }}>
-          {props.photo.title}
+          {photo.title}
         </h3>
         <p className="description" style={{ padding: 15 }}>
-          {props.photo.explanation}
+          {photo.explanation}
         </p>
       </div>
     </div>
   </div>
 );
+Photo.propTypes = {
+  photo: PropTypes.object,
+};
 export default Photo;

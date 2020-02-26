@@ -1,6 +1,3 @@
-/* eslint-disable react/no-unused-state */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/state-in-constructor */
 import React from 'react';
 import moment from 'moment';
 import DateInput from './components/DateInput';
@@ -34,19 +31,20 @@ export default class App extends React.Component {
   };
 
   render() {
+    const { photo, date } = this.state;
     return (
       <div style={{ overflow: 'hidden' }}>
         <div className="ui container" style={{ paddingTop: 5 }}>
           <div className="ui raised segment">
             <h1 className="ui center aligned container">
-              NASA'S Astronomy Pic of the Day
+              NASA'S Astronomy Picture of the Day
             </h1>
             <DateInput
-              photo={this.state.photo}
+              photo={photo}
               changeDate={this.changeDate}
               value={this.dateFromInput}
             />
-            <Photo photo={this.state.photo} date={this.state.date} />
+            <Photo photo={photo} date={date} />
           </div>
         </div>
       </div>
