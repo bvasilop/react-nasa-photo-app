@@ -4,9 +4,6 @@ body {
   justify-content: center;
   padding: 0.5rem;
 }
-.ui.raised.segment {
-  padding: 1rem 3rem !important;
-}
 h1 {
   font-size: 1.9rem !important;
 }
@@ -18,12 +15,6 @@ h2 {
 p {
   padding: 2rem;
 }
-.ui.icon.input > i.icon {
-  padding: 0 !important;
-  display: flex !important;
-  justify-content: flex-end !important;
-  width: 1.5em;
-}
 input,
 optgroup,
 select,
@@ -34,10 +25,18 @@ textarea {
   line-height: 1.15;
   margin: 0;
 }
+.ui.raised.segment {
+  padding: 1rem 3rem !important;
+}
+.ui.icon.input > i.icon {
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  width: 1.5em;
+}
 .ui.label {
   font-weight: bold !important;
 }
-
 @media only screen and (max-width: 767px) {
   .ui.raised.segment {
     padding: 0 0.5rem !important;
@@ -61,11 +60,15 @@ textarea {
     display: flex !important;
     justify-content: center !important;
   }
+  .ui.container {
+    margin: 0 0.15rem !important;
+  }
   h1 {
-    padding-top: 0.5rem;
-    font-size: 1.5rem !important;
+    padding: 1rem 0;
+    font-size: 1.35rem !important;
   }
   h2 {
+    font-size: 1.15rem !important;
     padding: 1rem 0.5rem 0 0.5rem !important;
     text-align: center !important;
   }

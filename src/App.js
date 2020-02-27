@@ -6,7 +6,7 @@ import './styles/App.css';
 
 export default class App extends React.Component {
   state = {
-    date: moment().format('YYYY-MM-DD'),
+    date: moment(),
     photo: '',
   };
 

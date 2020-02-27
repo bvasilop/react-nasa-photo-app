@@ -8,7 +8,6 @@ const Photo = ({ photo }) => (
         src={photo.url}
         alt={photo.title}
         className="ui centered big image"
-        //
       />
       <div>
         <h2 className="header">{photo.title}</h2>
