@@ -37,7 +37,7 @@ export default class App extends React.Component {
       <div className="ui container">
         <div className="ui raised segment">
           <h1 className="ui center aligned container">
-            NASA'S Astronomy Picture of the Day
+            NASA Astronomy Picture of the Day
           </h1>
           <DateInput
             photo={photo}
