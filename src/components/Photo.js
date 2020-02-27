@@ -11,7 +11,7 @@ const Photo = ({ photo }) => (
         //
       />
       <div>
-        <h3 className="header">{photo.title}</h3>
+        <h2 className="header">{photo.title}</h2>
         <p className="description">{photo.explanation}</p>
       </div>
     </div>

@@ -8,10 +8,12 @@ body {
   padding: 1rem 3rem !important;
 }
 h1 {
-  padding: 0 !important;
+  font-size: 1.9rem !important;
 }
-h3 {
+h2 {
+  padding-top: 1rem;
   text-align: center !important;
+  font-size: 1.35rem;
 }
 p {
   padding: 2rem;
@@ -38,7 +40,7 @@ textarea {
 
 @media only screen and (max-width: 767px) {
   .ui.raised.segment {
-    padding: 0.5rem !important;
+    padding: 0 0.5rem !important;
   }
   .ui.large.input {
     width: fit-content;
@@ -60,14 +62,14 @@ textarea {
     justify-content: center !important;
   }
   h1 {
-    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    font-size: 1.5rem !important;
   }
-  h3 {
-    padding-top: 1rem !important;
-    padding-bottom: 0 !important;
+  h2 {
+    padding: 1rem 0.5rem 0 0.5rem !important;
     text-align: center !important;
   }
   p {
-    padding-top: 0 !important;
+    padding: 0 1rem !important;
   }
 }
