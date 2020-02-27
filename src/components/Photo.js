@@ -8,15 +8,11 @@ const Photo = ({ photo }) => (
         src={photo.url}
         alt={photo.title}
         className="ui centered big image"
-        style={{ paddingRight: 20 }}
+        //
       />
       <div>
-        <h3 className="header" style={{ textAlign: 'center' }}>
-          {photo.title}
-        </h3>
-        <p className="description" style={{ padding: 15 }}>
-          {photo.explanation}
-        </p>
+        <h3 className="header">{photo.title}</h3>
+        <p className="description">{photo.explanation}</p>
       </div>
     </div>
   </div>

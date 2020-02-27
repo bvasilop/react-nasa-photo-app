@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import DateInput from './components/DateInput';
 import Photo from './components/Photo';
+import './styles/App.css';
 
 export default class App extends React.Component {
   state = {
@@ -33,19 +34,17 @@ export default class App extends React.Component {
   render() {
     const { photo, date } = this.state;
     return (
-      <div style={{ overflow: 'hidden' }}>
-        <div className="ui container" style={{ paddingTop: 5 }}>
-          <div className="ui raised segment">
-            <h1 className="ui center aligned container">
-              NASA'S Astronomy Picture of the Day
-            </h1>
-            <DateInput
-              photo={photo}
-              changeDate={this.changeDate}
-              value={this.dateFromInput}
-            />
-            <Photo photo={photo} date={date} />
-          </div>
+      <div className="ui container">
+        <div className="ui raised segment">
+          <h1 className="ui center aligned container">
+            NASA'S Astronomy Picture of the Day
+          </h1>
+          <DateInput
+            photo={photo}
+            changeDate={this.changeDate}
+            value={this.dateFromInput}
+          />
+          <Photo photo={photo} date={date} />
         </div>
       </div>
     );
