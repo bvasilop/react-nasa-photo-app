@@ -25,6 +25,16 @@ textarea {
   line-height: 1.15;
   margin: 0;
 }
+.navbar-container {
+  display: flex;
+  justify-content: center;
+}
+.ui.container {
+  margin-top: 2rem !important;
+}
+h1 {
+  text-align: center;
+}
 .ui.raised.segment {
   padding: 1rem 3rem !important;
 }
@@ -61,11 +71,12 @@ textarea {
     justify-content: center !important;
   }
   .ui.container {
-    margin: 0 0.15rem !important;
+    margin: 1 0.15rem !important;
   }
   h1 {
     padding: 1rem 0;
     font-size: 1.35rem !important;
+    text-align: center;
   }
   h2 {
     font-size: 1.15rem !important;
