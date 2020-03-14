@@ -1,8 +1,10 @@
 import React from 'react';
 import moment from 'moment';
+import DarkModeToggle from './DarkModeToggle';
 import DateInput from './components/DateInput';
 import Photo from './components/Photo';
 import './styles/App.css';
+import './styles/styles.scss';
 
 export default class App extends React.Component {
   state = {
@@ -34,17 +36,23 @@ export default class App extends React.Component {
   render() {
     const { photo, date } = this.state;
     return (
-      <div className="ui container">
-        <div className="ui raised segment">
-          <h1 className="ui center aligned container">
-            NASA Astronomy Picture of the Day
-          </h1>
-          <DateInput
-            photo={photo}
-            changeDate={this.changeDate}
-            value={this.dateFromInput}
-          />
-          <Photo photo={photo} date={date} />
+      <div>
+        <div className="navbar-container">
+          <div className="navbar">
+            <DarkModeToggle />
+          </div>
+        </div>
+        <br />
+        <div className="ui container">
+          <div className="ui raised segment">
+            <h1>NASA Astronomy Picture of the Day</h1>
+            <DateInput
+              photo={photo}
+              changeDate={this.changeDate}
+              value={this.dateFromInput}
+            />
+            <Photo photo={photo} date={date} />
+          </div>
         </div>
       </div>
     );
